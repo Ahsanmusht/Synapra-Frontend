@@ -330,7 +330,6 @@ async function getAllBlogs() {
 
     // Iterate through blogs and append rows to tbody
     blogs.map((blog) => {
-      console.log(blog);
       const row = `  <div class="blog-card">
       <img src="${blog.image}" alt="Blog Image">
       <div class="blog-card-content">
