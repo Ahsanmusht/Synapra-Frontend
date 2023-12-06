@@ -584,11 +584,15 @@ border: none !important;
 
 .splide__slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 1rem;
 }
 
 .about .row .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #333;
   padding: 1.5rem 1.5rem;
   flex: 1 1 40rem;
@@ -599,7 +603,7 @@ border: none !important;
 
 
 .about .row .content h3 {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   font-size: 4rem;
   color: rgb(219, 145, 8);
   text-transform: capitalize;
