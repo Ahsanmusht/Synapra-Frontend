@@ -1361,6 +1361,17 @@ border: none !important;
 
  
 }
+
+@media screen and(max-width:532px) and (min-width:450px){
+  .home .row{
+    /* background-color: red; */
+     display: flex;
+     justify-content: space-between;
+  }
+  .home .row .image img{
+    display: none;
+  }
+}
 @media (max-width: 565px){
   .home .row{
     /* background-color: red; */
@@ -1368,10 +1379,6 @@ border: none !important;
      justify-content: space-between;
   }
   .home .row .image{
-    flex: 1 1 8rem;
-    
-  }
-  .home .row .image img{
     /* height: 8vh;
     position: relative;
     top: -120px; */
@@ -1402,7 +1409,7 @@ border: none !important;
   .header .login-form {
     width: 90%;
   }
-  .home .row .image{
+  .home .row .image img{
     /* margin: auto; */
     display: none;
   }
