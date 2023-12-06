@@ -82,6 +82,7 @@ window.onscroll = () =>{
 
   
 
+
  
 //   light gallery work
 

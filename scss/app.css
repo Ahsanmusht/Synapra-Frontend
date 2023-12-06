@@ -433,6 +433,8 @@ border: none !important;
     line-height: 2;
 }
 
+
+
 .highlight{
       font-weight: 900;
     font-family: 'Dancing Script', 'Cursive';
@@ -696,33 +698,92 @@ border: none !important;
   line-height: 2.2;
 }
 
-.facilites {
+.facilities {
   background: #eee;
 }
-.facilites .box-container {
+
+.facilities .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   gap: 2rem;
 }
-.facilites .box-container .box {
+
+.facilities .box-container .box {
+  position: relative;
   background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border: 0.1rem solid #333; 
+  border: 0.1rem solid #333;
   border-radius: 1rem;
   transition: .3s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.facilites .box-container .box img{
+.facilities .box-container .box img {
   border-radius: 1rem;
   width: 100% !important;
   height: 20rem;
 }
 
-
-.facilites .box-container .box:hover img{
+.facilities .box-container .box:hover img {
   transform: scale(1.1);
   border: 0.1rem solid #333;
 }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+}
+
+.close-modal {
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #bbb;
+}
+
+
+.close-modal {
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #bbb;
+}
+
 
 
 
@@ -1013,32 +1074,36 @@ border: none !important;
 
 /* services */
 
-.services{
-  background-color: #eee;
+.services {
+  background: #eee;
 }
-
-.services .box-container{
+.services .box-container {
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 2rem;
+}
+.services .box-container .box {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid #333; 
+  border-radius: 1rem;
+  transition: .3s ease;
+  width: 100%;
+  height: 70vh;
 }
 
-.services .box-container .box{
-  width: 30rem;
-  height: 70vh;
+.services .box-container .box img{
+  border-radius: 1rem;
+  width: 100% !important;
+  height: 100%;
 }
 
 
 .services .box-container .box:hover{
-  transform: scale(0.9);
+  transform: scale(.9);
+  border: 0.1rem solid #333;
 }
 
-.services .box-container .box img{
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-}
 
 
 
@@ -1178,13 +1243,51 @@ border: none !important;
   text-transform: capitalize;
   margin-top: 2rem;
 }
-.footer .developer span {
+.footer .developer a {
   color: #D4AF37;
 }
 
 .footer .footer-links-soi{
   display: flex;
   justify-content: space-between;
+}
+
+
+@media (max-width: 1326px) {
+  .home .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.home .row .image {
+    flex: 1 1 30rem;
+  }
+  .home .row .image img {
+    width: 80%;
+    height: 40vh;
+  }
+  .home .row .content {
+    text-align: center;
+    flex: 1 1 30rem;
+  }
+  .home .row .content h1 {
+    font-family: 'Dancing Script', 'Cursive';
+    font-size: 5rem;
+    color: #111;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+}
+.home .row .content p {
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 600;
+    line-height: 2;
+}
+
 }
 
 @media (max-width: 991px) {
@@ -1227,9 +1330,7 @@ border: none !important;
     top: 10%;
   }
 
-  .home .row .image{
-    display: none;
-  }
+  
 }
 @media (max-width: 768px) {
   
@@ -1242,8 +1343,12 @@ border: none !important;
   .home .slide .content h3 {
     font-size: 3rem;
   }
-  .home .row .image{
+  .home .row .image1{
     display: none;
+  }
+
+  .home .row .image{
+    margin-left: 8rem;
   }
 
  
@@ -1322,4 +1427,7 @@ border: none !important;
     width: 100%;
     height: 60vh;
   }
+
+ 
 }
+

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synapra</title>
 
+    <link rel="icon" href="./image/icon.webp" type="image/png" />
     <!-- css file link -->
 
     <link rel="stylesheet" href="./scss/app.css" />
-<!-- swiper cdn link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- swiper cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- font awesome cdn link -->
 
-    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
 
     <!-- light gallery js file link -->
 
@@ -50,7 +54,7 @@
       >
 
       <nav class="navbar">
-        <a class="active" href="./index.html">home</a>
+        <a class="active" href="index.html">home</a>
         <a href="./about.html">about</a>
         <a href="./cpd-program.html">CPD Program</a>
         <a target="_blank" href="https://myiee.org/university/synapra">IEF</a>
@@ -239,21 +243,24 @@
     </div>
 
     <div class="developer">
-      Copyright 2023 @ Designed By <span>Ahsan Mushtaq</span> . All Right
+      Copyright 2023 @ Designed By <a href="https://skahmerali.com/">SK Digi Tech</a> . All Right
       Reserved !
     </div>
   </section>
 
   <!-- footer section ends ---->
 
-  <!-- light gallery js file link -->
-
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <script src="./dashboard/js/script.js"></script>
     <script src="./js/App.js"></script>
+    <script>getAllBlogs()</script>
+    
 
-   
+
+  <!-- light gallery js file link -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
   <!-- swiper js file link -->
@@ -268,14 +275,45 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/js/extensions/autoplay.min.js"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <!-- js file link -->
 
-  <script src="./dashboard/js/script.js"></script>
-  <script>getAllBlogs()</script>
+  <script src="app.js"></script>
+  <script>
+    
+    var swiper = new Swiper('.swiper', {
+  // Optional parameters
  
+  loop: true,
+  autoplay:{
+    delay:3000,
+    disableOnInteraction:false,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+ 
+});
+  
+
+    
+
+  </script>
+
 <script>
 
   AOS.init({

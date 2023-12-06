@@ -313,7 +313,7 @@ async function SendMessage() {
   try {
     // Get form input values
     let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("email1").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
 

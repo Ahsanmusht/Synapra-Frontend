@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Synapra</title>
 
+    <link rel="icon" href="./image/icon.webp" type="image/png" />
+
     <!-- css file link -->
 
     <link rel="stylesheet" href="./scss/app.css" />
@@ -169,7 +171,7 @@
   
             <input type="text" placeholder="name" class="box" id="name" />
   
-            <input type="email" placeholder="email" class="box" id="email" />
+            <input type="email" placeholder="email" class="box" id="email1" />
   
             <input type="text" placeholder="Subject" class="box" id="subject" />
   
@@ -255,20 +257,21 @@
     </div>
 
     <div class="developer">
-      Copyright 2023 @ Designed By <span>Ahsan Mushtaq</span> . All Right
+      Copyright 2023 @ Designed By <a href="https://skahmerali.com/">SK Digi Tech</a> . All Right
       Reserved !
     </div>
   </section>
 
   <!-- footer section ends ---->
 
+ 
   <!-- light gallery js file link -->
 
-  
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src="./js/App.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 
@@ -284,15 +287,37 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.7/dist/js/extensions/autoplay.min.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   
   <!-- js file link -->
 
   <script src="app.js"></script>
- 
+  <script>
+    new Splide("#image-slider").mount();
+
+    var swiper = new Swiper(".reviews-slider", {
+loop: true,
+grabCursor: true,
+spaceBetween: 20,
+autoplay: {
+  delay: 3000, // Set the delay in milliseconds between slides
+  disableOnInteraction: false, // Set to false to continue autoplay even when the user interacts with the swiper
+},
+breakpoints: {
+  640: {
+    slidesPerView: 1,
+  },
+  768: {
+    slidesPerView: 2,
+  },
+  991: {
+    slidesPerView: 3,
+  },
+},
+});
+
+  </script>
 
 <script>
 
